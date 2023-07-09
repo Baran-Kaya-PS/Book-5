@@ -23,9 +23,79 @@ img {
  height: auto;
  vertical-align: bottom;
 }
+.sr-only {
+    border: 0;
+    clip : rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 
 .PageGrid {
     display: grid;
     grid-template-columns: 72px auto 72px;
     grid-template-rows: 72px auto auto;
-}   
+}
+
+.nav-button {
+    grid-column: 3;
+    grix-row: 1;
+    padding: 0;
+    outline: none;
+    border: none;
+    background-color: #98a718;
+    cursor: pointer;
+}
+
+.nav-button {
+    display: grid;
+    place-content: center;
+}
+
+.nav-button::before,
+.nav-button::after {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 32px;
+    height: 4px;
+    background-color: #ffffff;
+}
+
+.nav-button::before{
+    transform: translateY(-5px);
+}
+.nav-button::after{
+    transform: translateY(5px);
+}
+
+.sns {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: end;
+    align-self: start;
+    margin-top: 187px;
+    margin-right: 10px;
+    display: grid;
+    gap:30px;
+}
+.footer {
+    grid-column: 1 / -1 ;
+    grid-row: 3;
+}
+.decor {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    align-self: start;
+    margin-top: 257px;
+    margin-left: 10px;
+    color: #aaaaaa;
+    font-size: 20px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
